@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogProvider", "LogProvider\LogProvider.csproj", "{5244D687-1699-4B77-84EE-6A2FCA59C3A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{6FC95161-AD3C-4ED1-AAF1-8189B3BA4C1F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5244D687-1699-4B77-84EE-6A2FCA59C3A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5244D687-1699-4B77-84EE-6A2FCA59C3A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5244D687-1699-4B77-84EE-6A2FCA59C3A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5244D687-1699-4B77-84EE-6A2FCA59C3A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FC95161-AD3C-4ED1-AAF1-8189B3BA4C1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FC95161-AD3C-4ED1-AAF1-8189B3BA4C1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FC95161-AD3C-4ED1-AAF1-8189B3BA4C1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FC95161-AD3C-4ED1-AAF1-8189B3BA4C1F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

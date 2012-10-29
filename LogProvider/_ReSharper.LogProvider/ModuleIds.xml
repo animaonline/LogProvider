@@ -1,0 +1,5 @@
+<Modules>
+  <Module PersistentId="5244D687-1699-4B77-84EE-6A2FCA59C3A5" ModuleId="LogProvider" />
+  <Module PersistentId="1CD66C9E-9579-4631-B53B-B8E0A85C8BAB" ModuleId="LogProvider.Tests" />
+  <Module PersistentId="6FC95161-AD3C-4ED1-AAF1-8189B3BA4C1F" ModuleId="Tests" />
+</Modules>
