@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 
 namespace Animaonline.Utils.Logging
 {
+    [DebuggerStepThrough]
     public class LogProvider
     {
         #region Public Constructors
@@ -145,7 +146,7 @@ namespace Animaonline.Utils.Logging
         public class LogReceiver
         {
             #region Public Constructors
-             
+
             public LogReceiver(Action<LogEntry> onReceive)
             {
                 if (onReceive == null)
