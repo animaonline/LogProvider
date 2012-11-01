@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Diagnostics;
 
 namespace Animaonline.Utils.Logging
@@ -151,7 +153,16 @@ namespace Animaonline.Utils.Logging
             {
                 if (onReceive == null)
                     throw new ArgumentException("No action subscriber provided.");
+
                 this.OnReceive = onReceive;
+            }
+
+            public LogReceiver(List<Action<LogEntry>> onReceiveActions)
+            {
+                if (onReceiveActions.Any(a => a == null))
+                    throw new ArgumentException("Blank actions are not supported.");
+
+                this.OnReceiveActions = onReceiveActions;
             }
 
             #endregion
@@ -159,6 +170,7 @@ namespace Animaonline.Utils.Logging
             #region Public Fields
 
             public Action<LogEntry> OnReceive { get; set; }
+            public List<Action<LogEntry>> OnReceiveActions { get; set; }
 
             #endregion
 
@@ -172,6 +184,9 @@ namespace Animaonline.Utils.Logging
                 {
                     if (this.OnReceive != null)
                         this.OnReceive(logEntry);
+
+                    if (this.OnReceiveActions != null)
+                        this.OnReceiveActions.ForEach(action => action(logEntry));
                 }
             }
 
