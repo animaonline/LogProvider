@@ -164,20 +164,26 @@ namespace Animaonline.Utils.Logging
 
             #region Private Methods
 
+            private readonly object _locker = new object();
+
             public void SignalReceive(LogEntry logEntry)
             {
-                if (this.OnReceive != null)
-                    this.OnReceive(logEntry);
+                lock (_locker)
+                {
+                    if (this.OnReceive != null)
+                        this.OnReceive(logEntry);
+                }
             }
 
             #endregion
         }
 
-        public class LogEntry
+        public struct LogEntry
         {
             #region Public Constructors
 
             public LogEntry(LogEntryType entryType, string value, string tag = null, Exception error = null)
+                : this()
             {
                 this.TimeStamp = DateTime.Now;
 
